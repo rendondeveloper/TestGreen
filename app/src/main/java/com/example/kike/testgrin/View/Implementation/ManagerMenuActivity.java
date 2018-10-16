@@ -1,5 +1,7 @@
 package com.example.kike.testgrin.View.Implementation;
 
+import android.Manifest;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -12,6 +14,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import com.example.kike.testgrin.Adapter.ViewPagerAdapter;
 import com.example.kike.testgrin.R;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,6 +34,7 @@ public class ManagerMenuActivity extends AppCompatActivity implements  Navigatio
         setContentView(R.layout.manager);
         initControl();
         initDataControl();
+        checkPermissions();
     }
 
     @Override
@@ -130,12 +135,21 @@ public class ManagerMenuActivity extends AppCompatActivity implements  Navigatio
         return  resultTextViewSelected;
     }
 
-    private TextView setTextViewTab(Integer image, Integer text, Integer color)
-    {
+    private TextView setTextViewTab(Integer image, Integer text, Integer color) {
         final TextView tabCustom = (TextView) LayoutInflater.from(this).inflate(R.layout.tab, null);
         tabCustom.setText(text);
         tabCustom.setTextColor(color);
         tabCustom.setCompoundDrawablesWithIntrinsicBounds(0, image, 0, 0);
         return tabCustom;
+    }
+
+    private void checkPermissions() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+
+            this.requestPermissions(new String[]{
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+            }, 1001);
+        }
     }
 }

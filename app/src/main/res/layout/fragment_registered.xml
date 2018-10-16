@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvRegistered"
         android:layout_width="match_parent"
@@ -35,12 +36,18 @@
         android:id="@+id/fbtnOrder"
         android:layout_width="@dimen/button_floating_secondary"
         android:layout_height="@dimen/button_floating_secondary"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="84dp"
-        android:src="@drawable/ic_refresh"
+        android:layout_marginBottom="88dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:src="@drawable/ic_order"
         app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
 
 </android.support.constraint.ConstraintLayout>
