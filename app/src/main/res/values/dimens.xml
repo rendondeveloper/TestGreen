@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tab_label">17sp</dimen>
+    <dimen name="button_floating">60dp</dimen>
+    <dimen name="button_floating_secondary">40dp</dimen>
+
+</resources>
