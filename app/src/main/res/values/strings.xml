@@ -1,21 +1,20 @@
 <resources>
     <string name="app_name">TestGrin</string>
-    <string name="message_device_not_support_bluetooth">El dispositivo no cuenta con bluetooth, no e sposible usar esta aplicación.</string>
+    <string name="message_device_not_support_bluetooth">El dispositivo no cuenta con bluetooth, no es posible usar esta aplicación.</string>
     <string name="button_devices_search">Buscar dispositivos bluetooth</string>
     <string name="button_registered">Buscar dispositivos registrados</string>
-    <string name="card_name_device">Telefono Kike</string>
+    <string name="card_name_device">Teléfono Kike</string>
     <string name="card_strength">25</string>
     <string name="card_date">12/10/2018</string>
     <string name="text_tab_device">Buscar dispositivos</string>
     <string name="text_tab_list">Registrados</string>
     <string name="message_fail_download_info">Error al consultar los dispositivos registrados</string>
-    <string name="message_device_not_search_device">No se pueden buscar dispositivoas en este momento</string>
-    <string name="modal_donwload_info">Descargando informacón</string>
+    <string name="message_device_not_search_device">No se puede buscar dispositivos en este momento</string>
+    <string name="modal_donwload_info">Descargando información</string>
     <string name="modal_device_search">Buscando dispositivos</string>
     <string name="modal_device_upload">Subiendo dispositivo</string>
-    <string name="message_device_register_success">El dispositivo se dío de alta correctamente</string>
+    <string name="message_device_register_success">El dispositivo se dio de alta correctamente</string>
     <string name="message_fail_device_register_success">El dispositivo no pudo ser dado de alta</string>
-    <string name="message_not_data">El disposituvo no puede cumple el requisito de nombre e intensidad</string>
+    <string name="message_not_data">El dispositivo no puede cumple el requisito de nombre e intensidad</string>
     <string name="button_order">Ordenar resultados por fechas</string>
-
 </resources>
