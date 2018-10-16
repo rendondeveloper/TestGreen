@@ -56,17 +56,9 @@ public class ServiceInvoke
         }
 
         if(this.retrofit == null) {
-            /*
-            final OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();
-            HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
-            loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-            clientBuilder.addInterceptor(loggingInterceptor);
-*/
             this.retrofit = new Retrofit
                     .Builder()
                     .baseUrl("http://mock.westcentralus.cloudapp.azure.com/grin_test/bluetooth/")
-                    //.client(clientBuilder.build())
-                    //.addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create(this.gson))
                     .build();
         }
@@ -80,9 +72,7 @@ public class ServiceInvoke
             this.serviceInvoke = retrofit.create(IServiceInvoke.class);
         }
 
-
-
-        this.invokePost = this.serviceInvoke.ExecuteSaveDevice(name, strength);
+        this.invokePost = this.serviceInvoke.ExecuteSaveDevice("{\"body\": \"sssss\",\"name\": \""+name+"\",\"strength\": \""+strength+"\"}");
 
         this.invokePost.enqueue(new Callback<ResponseCreateDevice>() {
             @Override

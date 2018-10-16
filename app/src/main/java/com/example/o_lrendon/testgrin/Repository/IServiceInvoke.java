@@ -21,9 +21,7 @@ public interface IServiceInvoke
     @GET("all")
     Call<ResponseDevice> GetListDevice(@Query("order") String order);
 
-    @Headers("Content-Type: application/json")
-    @FormUrlEncoded
     @POST("create")
-    Call<ResponseCreateDevice> ExecuteSaveDevice(@Field("name") String name, @Field("strength") String strength);
+    Call<ResponseCreateDevice> ExecuteSaveDevice(@Body String body);
 
 }
